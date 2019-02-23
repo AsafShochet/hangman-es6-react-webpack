@@ -9,10 +9,7 @@ class WordDisplay extends Component {
 
   render() {
     return <div className={style['word-display']}>
-      {/* {this.renderWord()}  */}
-      <Letter />
-      <Letter />
-      <Letter />
+      {this.renderWord()}
     </div>
   };
 
@@ -20,7 +17,7 @@ class WordDisplay extends Component {
     let word = this.props.word;
     let guessed = this.props.guessedLetters;
     return word.split('').map((letter) => {
-      return <Letter char={letter} shown={guessed.indexOf(letter) > -1 ? true : false} />
+      return <Letter char={letter} show={guessed.indexOf(letter) > -1 ? true : false} />
     })
   }
 

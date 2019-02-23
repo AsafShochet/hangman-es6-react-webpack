@@ -13,8 +13,8 @@ class GameStatus extends Component {
   render() {
     return (
       <div className={style["game-status"]}>
-        <PaintedStatus />
-        <WordDisplay />
+        <PaintedStatus errorCount={this.props.errorCount} />
+        <WordDisplay word={this.props.word} guessedLetters={this.props.guessedLetters}/>
       </div>
     )
   };

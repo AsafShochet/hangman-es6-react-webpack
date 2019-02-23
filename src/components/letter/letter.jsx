@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import style from './letter.css';
 
 class Letter extends Component {
@@ -9,13 +9,9 @@ class Letter extends Component {
   }
 
   render() {
-    return <div className={style['letter']}>L</div>;
-    // if (!this.props.shown) {
-    //   return <div className={style['empty-letter']} />
-    // }
-    // return <div className={style["existing-letter"]}>{this.props.char}</div>
+    return <div className={style['letter']}> {this.props.show ? this.props.char : ''}</div>;
   };
-  
+
 }
 
 export default Letter;
