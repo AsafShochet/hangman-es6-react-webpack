@@ -1,0 +1,5 @@
+.game-status{
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+}

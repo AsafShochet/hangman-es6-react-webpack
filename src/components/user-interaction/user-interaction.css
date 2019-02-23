@@ -1,0 +1,8 @@
+.user-interaction {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 40px;
+    font-size:30px;
+    flex: 1;
+}
