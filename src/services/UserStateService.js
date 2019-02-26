@@ -4,6 +4,8 @@ export default class UserStateService {
         this.errorCount = 0;
         this.attemptsCount = 0;
         this.guessedLetters = [];
+        this.gameOver = false;
+        this.userWon = false;
     }
 
     getErrorCount() {
@@ -16,5 +18,36 @@ export default class UserStateService {
 
     getGuessedLetters() {
         return this.guessedLetters;
-    }   
+    }
+
+    addGuessedLetter(letter) {
+        if (this.guessedLetters.indexOf(letter) == -1) {
+            this.guessedLetters.push(letter);
+        }
+    }
+
+    addErrorToCounter() {
+        this.errorCount++;
+    }
+
+    addAttemptToCount() {
+        this.attemptsCount++;
+    }
+
+    getUserWon() {
+        return this.userWon;
+    }
+
+    setUserWon(didTheUserWin) {
+        this.userWon = didTheUserWin;
+    }
+
+
+    setGameOver(gameOver) {
+        this.gameOver = gameOver;
+    }
+
+    isGameOver() {
+        return this.gameOver;
+    }
 }

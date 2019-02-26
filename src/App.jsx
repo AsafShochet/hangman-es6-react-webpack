@@ -2,14 +2,12 @@ import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
 import GameWrapper from './components/game-wrapper/game-wrapper';
 import WordGenerator from './services/word-generator';
-import UserStateService from './services/UserStateService';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {};  
-    // a stateful service to hold the user state
-    this.userState = new UserStateService();
+
   }
 
   // getting the word from the "server"
@@ -31,7 +29,7 @@ class App extends Component {
 
     return (
       <div className="app">
-        <GameWrapper word={this.state.word} userStateService={this.userState} />
+        <GameWrapper word={this.state.word}  />
       </div>
     );
   }

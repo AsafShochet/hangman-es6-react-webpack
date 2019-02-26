@@ -16,8 +16,9 @@ class WordDisplay extends Component {
   renderWord() {
     let word = this.props.word;
     let guessed = this.props.guessedLetters;
+    console.log('********* guessed ***********', guessed);
     return word.split('').map((letter) => {
-      return <Letter char={letter} show={guessed.indexOf(letter) > -1 ? true : false} />
+      return <Letter char={letter} key={Math.random()} show={guessed.indexOf(letter) > -1 ? true : false} />
     })
   }
 
