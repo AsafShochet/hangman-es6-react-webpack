@@ -11,6 +11,7 @@ import phase7 from '../../resources/images/7.jpg';
 import phase8 from '../../resources/images/8.jpg';
 import phase9 from '../../resources/images/9.jpg';
 import phase10 from '../../resources/images/10.jpg';
+import winningImage from '../../resources/images/winning.jpg';
 
 class PaintedStatus extends Component {
 
@@ -48,10 +49,13 @@ class PaintedStatus extends Component {
     }
   }
 
+  _getWinningImage() {
+    return winningImage;
+  }
   render() {
     let errors = this.props.errorCount;
     return <div className={style['painted-status']}>
-      <img src={this._getImageByErrorCount(errors)} />
+      <img src={this.props.didUserWin ? this._getWinningImage() : this._getImageByErrorCount(errors)} />
     </div>;
   };
 

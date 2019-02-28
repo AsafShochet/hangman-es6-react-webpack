@@ -21,11 +21,13 @@ class GameWrapper extends Component {
   }
 
   isWordComplete(word, guessedLetters) {
-    word.split('').forEach((letter) => {
-      if (guessedLetters.indexOf(letter) === -1) {
+    for (var i = 0; i < word.length; i++) {
+      console.log('letter: ',word[i],', guessedLetters: ', guessedLetters);
+      if (guessedLetters.indexOf(word[i]) === -1) {
+        console.log('guessedLetters.indexOf(letter[i]: ', guessedLetters.indexOf(word[i]), 'letter[i]: ', word[i]);
         return false;
       }
-    });
+    };
     return true;
   }
 
@@ -42,6 +44,7 @@ class GameWrapper extends Component {
     } else {
       // check if the user won
       if (this.isWordComplete(this.word, this.userState.getGuessedLetters())) {
+        console.log('word complete!!');
         this.userState.setUserWon(true);
         this.userState.setGameOver(true);
       }
@@ -59,8 +62,8 @@ class GameWrapper extends Component {
   render() {
     return (
       <div className={style["game-wrapper"]}>
-        <GameStatus errorCount={this.state.errorCount} word={this.word} guessedLetters={this.state.guessedLetters} />
-        <UserInteraction enableAnswering={true} handleLetterSubmit={this.onLetterSubmit} />
+        <GameStatus errorCount={this.state.errorCount} word={this.word} guessedLetters={this.state.guessedLetters} didUserWin={this.state.userWon}/>
+        <UserInteraction enableAnswering={!this.state.isGameOver} handleLetterSubmit={this.onLetterSubmit} />
       </div>
     );
   };
