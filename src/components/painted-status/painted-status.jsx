@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import style from './painted-status.css';
 import phase0 from '../../resources/images/0.jpg';
 import phase1 from '../../resources/images/1.jpg';
 import phase2 from '../../resources/images/2.jpg';
@@ -12,6 +11,7 @@ import phase8 from '../../resources/images/8.jpg';
 import phase9 from '../../resources/images/9.jpg';
 import phase10 from '../../resources/images/10.jpg';
 import winningImage from '../../resources/images/winning.jpg';
+import './painted-status.css';
 
 class PaintedStatus extends Component {
 
@@ -54,7 +54,7 @@ class PaintedStatus extends Component {
   }
   render() {
     let errors = this.props.errorCount;
-    return <div className={style['painted-status']}>
+    return <div className='painted-status'>
       <img src={this.props.didUserWin ? this._getWinningImage() : this._getImageByErrorCount(errors)} />
     </div>;
   };

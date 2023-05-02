@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import style from './user-interaction.css';
+import './user-interaction.css';
 
 class UserInteraction extends Component {
 
@@ -13,6 +13,7 @@ class UserInteraction extends Component {
   }
 
   handleChange() {
+    // eslint-disable-next-line no-restricted-globals
     this.setState({ value: event.target.value });
   }
 
@@ -24,7 +25,7 @@ class UserInteraction extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit} className={style["user-interaction"]}>
+      <form onSubmit={this.handleSubmit} className='user-interaction'>
 
         <label className="instruction">
           Enter a letter

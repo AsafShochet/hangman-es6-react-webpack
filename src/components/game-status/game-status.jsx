@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import style from './game-status.css';
 import PaintedStatus from '../painted-status/painted-status';
 import WordDisplay from '../word-display/word-display';
+import './game-status.css';
 
 class GameStatus extends Component {
 
@@ -12,7 +12,7 @@ class GameStatus extends Component {
 
   render() {
     return (
-      <div className={style["game-status"]}>
+      <div className={"game-status"}>
         <PaintedStatus errorCount={this.props.errorCount} didUserWin={this.props.didUserWin}/>
         <WordDisplay word={this.props.word} guessedLetters={this.props.guessedLetters}/>
       </div>

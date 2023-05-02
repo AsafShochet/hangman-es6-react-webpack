@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import style from './letter.css';
+import './letter.css';
 
 class Letter extends Component {
 
@@ -9,7 +9,7 @@ class Letter extends Component {
   }
 
   render() {
-    return <div className={style['letter']}> {this.props.show ? this.props.char : ''}</div>;
+    return <div className='letter'> {this.props.show ? this.props.char : '_'}</div>;
   };
 
 }

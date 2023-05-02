@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import style from './game-wrapper.css';
 import GameStatus from '../game-status/game-status';
 import UserInteraction from '../user-interaction/user-interaction';
 import UserStateService from '../../services/UserStateService';
+import './game-wrapper.css';
 
 class GameWrapper extends Component {
 
@@ -61,7 +61,7 @@ class GameWrapper extends Component {
 
   render() {
     return (
-      <div className={style["game-wrapper"]}>
+      <div className='game-wrapper'>
         <GameStatus errorCount={this.state.errorCount} word={this.word} guessedLetters={this.state.guessedLetters} didUserWin={this.state.userWon}/>
         <UserInteraction enableAnswering={!this.state.isGameOver} handleLetterSubmit={this.onLetterSubmit} />
       </div>

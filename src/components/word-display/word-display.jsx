@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Letter from '../letter/letter';
-import style from './word-display.css'
+import './word-display.css'
 class WordDisplay extends Component {
 
   constructor(props) {
@@ -8,7 +8,7 @@ class WordDisplay extends Component {
   }
 
   render() {
-    return <div className={style['word-display']}>
+    return <div className='word-display'>
       {this.renderWord()}
     </div>
   };
