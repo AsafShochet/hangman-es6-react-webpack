@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import { hot } from 'react-hot-loader';
 import GameWrapper from './components/game-wrapper/game-wrapper';
 import WordGenerator from './services/word-generator';
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {};  
+    this.state = {}; 
 
   }
 
@@ -35,4 +34,4 @@ class App extends Component {
   }
 }
 
-export default hot(module)(App);
+export default App;

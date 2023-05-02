@@ -1,53 +1,51 @@
 export default class UserStateService {
+  constructor() {
+    this.errorCount = 0;
+    this.attemptsCount = 0;
+    this.guessedLetters = [];
+    this.gameOver = false;
+    this.userWon = false;
+  }
 
-    constructor() {
-        this.errorCount = 0;
-        this.attemptsCount = 0;
-        this.guessedLetters = [];
-        this.gameOver = false;
-        this.userWon = false;
+  getErrorCount() {
+    return this.errorCount;
+  }
+
+  getAttemptsCount() {
+    return this.attemptsCount;
+  }
+
+  getGuessedLetters() {
+    return this.guessedLetters;
+  }
+
+  addGuessedLetter(letter) {
+    if (this.guessedLetters.indexOf(letter) === -1) {
+      this.guessedLetters.push(letter);
     }
+  }
 
-    getErrorCount() {
-        return this.errorCount;
-    }
+  addErrorToCounter() {
+    this.errorCount += 1;
+  }
 
-    getAttemptsCount() {
-        return this.attemptsCount;
-    }
+  addAttemptToCount() {
+    this.attemptsCount += 1;
+  }
 
-    getGuessedLetters() {
-        return this.guessedLetters;
-    }
+  getUserWon() {
+    return this.userWon;
+  }
 
-    addGuessedLetter(letter) {
-        if (this.guessedLetters.indexOf(letter) == -1) {
-            this.guessedLetters.push(letter);
-        }
-    }
+  setUserWon(didTheUserWin) {
+    this.userWon = didTheUserWin;
+  }
 
-    addErrorToCounter() {
-        this.errorCount++;
-    }
+  setGameOver(gameOver) {
+    this.gameOver = gameOver;
+  }
 
-    addAttemptToCount() {
-        this.attemptsCount++;
-    }
-
-    getUserWon() {
-        return this.userWon;
-    }
-
-    setUserWon(didTheUserWin) {
-        this.userWon = didTheUserWin;
-    }
-
-
-    setGameOver(gameOver) {
-        this.gameOver = gameOver;
-    }
-
-    isGameOver() {
-        return this.gameOver;
-    }
+  isGameOver() {
+    return this.gameOver;
+  }
 }

@@ -1,88 +1,70 @@
-## Webpack react minimal boilerplate
-<p align="center">
-    <img alt="dependencies" title="dependencies" src="https://img.shields.io/david/hashemkhalifa/webpack-react-boilerplate.svg" >
-   <img alt="dependencies" title="dependencies" src="https://img.shields.io/github/last-commit/hashemkhalifa/webpack-react-boilerplate.svg" >
-</p>
+# Getting Started with Create React App
 
-> Minimal webpack and react boilerplate using latest version of react and babel as well as jest and enzyme for more details about technologies used. [click](#technologies-used) 
-> with real time server changes ;)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-> check out  [Medium article](https://medium.com/@hashem.khalifa/minimal-webpack-and-react-starter-boilerplate-seriously-d90a673e134f) for more details 
+## Available Scripts
 
+In the project directory, you can run:
 
+### `npm start`
 
-![Real time change](https://cdn-images-1.medium.com/max/1600/1*0Slpwk3trmF7kLeoFp5UOw.gif)
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### Table of contents
-[Project structure](#project-structure)
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-[Installation](#installation)
+### `npm test`
 
-[Configuration](#configuration)
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-[Technologies used](#technologies-used)
+### `npm run build`
 
-### Project structure
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-````
-build/
-src/
-|- index.jsx _______________________________ # Application entry 
-|- App.jsx _________________________________ # Application init
-|  |- Components/
-|    |- hello-world/ 
-|       |- index.jsx _______________________ # Sample component
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-webpack
-|- paths.js ________________________________ # webpack paths needed
-|- webpack.common.js _______________________ # common webpack config
-|- webpack.dev.js __________________________ # development config
-|- webpack.prod.js _________________________ # production config      
-````
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+### `npm run eject`
 
-### Installation
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-1- Clone the boilerplate repo
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-`git clone git@github.com:HashemKhalifa/webpack-react-boilerplate.git`
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-2- `yarn` or `npm install` to install npm packages
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-3- start dev server using `yarn start` or `npm start`.
+## Learn More
 
-3- build and bundling your resources for production `yarn build`.
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-4- Unit testing will watch all your changes in the test files as well as create coverage folder for you. 
-`yarn test`
+To learn React, check out the [React documentation](https://reactjs.org/).
 
+### Code Splitting
 
-### Configuration
-* Webpack Config paths based on your file structure you can go to `webpack/paths.js` and modify the source and file names based on your need.
-* `webpack/webpack.common.js` config common webpack for both dev and production environments.
-* webpack/webpack.dev.js config webpack for dev environment.
-* `webpack/webpack.prod.js` config webpack for production environment.
-* `/webpack.config.js` main webpack config that merge common and webpack environment based config.
-* Enzyme config `/setupTest.js` here you will have all setup for enzyme to test your component.
-* Prettier config `/.prettierc`.
-* Browsers list config `/.browserslistrc`.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
+### Analyzing the Bundle Size
 
-#### Technologies used
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
+### Making a Progressive Web App
 
-* [Webpack 4](https://github.com/webpack/webpack) 
-* [Babel 7](https://github.com/babel/babel) [ transforming JSX and ES6,ES7,ES8 ]
-* [React](https://github.com/facebook/react) `16.6`
-* [Lodash](https://github.com/lodash/lodash)
-* [Jest](https://github.com/facebook/jest) [ Unit test]
-* [Enzyme](http://airbnb.io/enzyme/) for UI testing.
-* [Eslint](https://github.com/eslint/eslint/) with airbnb config
-* [Prettier](https://github.com/prettier/prettier) [ Code formatter ]
-* [Style](https://github.com/webpack-contrib/style-loader) & [CSS Loader](https://github.com/webpack-contrib/css-loader) & [SASS-loader](https://github.com/webpack-contrib/sass-loader)
-* [CSS modules](https://github.com/css-modules/css-modules) [ Isolated style based on each component ]
-* [Browsers list](https://github.com/browserslist/browserslist) [ Share target browsers between different front-end tools, like Autoprefixer, Stylelint and babel-preset-env ]
-* [React hot loader](https://github.com/gaearon/react-hot-loader)
-* [Webpack dev serve](https://github.com/webpack/webpack-dev-server) 
-# hangman-es6-react-webpack
-# hangman-es6-react-webpack
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
